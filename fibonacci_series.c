@@ -7,19 +7,19 @@ int main(void) {
     int nb1 = 0, nb2 = 1;
 
     if (limit >= 0) {
-        printf("%d ", nb1);
+        printf("%d, ", nb1);
     }
     if (limit >= 1) {
-        printf("%d ", nb2);
+        printf("%d, ", nb2);
     }
 
     int suite = nb1 + nb2;
     while (suite <= limit) {
-        printf("%d ", suite);
+        printf("%d, ", suite);
         nb1 = nb2;
         nb2 = suite;
         suite = nb1 + nb2;
     }
-    
+
     return 0;
 }

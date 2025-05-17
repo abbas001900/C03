@@ -20,7 +20,6 @@ int main(void) {
         nb2 = suite;
         suite = nb1 + nb2;
     }
-
-    printf("\n");
+    
     return 0;
 }

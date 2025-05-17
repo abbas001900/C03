@@ -6,10 +6,10 @@ int main(void) {
 
     int nb1 = 0, nb2 = 1;
 
-    if (limit >= 0) {
+    if (limit > 0) {
         printf("%d ", nb1);
     }
-    if (limit >= 1) {
+    if (limit > 1) {
         printf("%d ", nb2);
     }
 

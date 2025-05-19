@@ -1,16 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int limite;
-    scanf("%d", &limite);
+    int a, b, limite;
+    if (scanf("%d", &limite) == 1) {
 
-    int a = 0, b = 1;
+        a = 0, b = 1;
+        if (limite == 0) {
+            printf("%d", a);
 
-    while (a < limite) {
-        printf("%d ", a);
-        int temp = a + b;
-        a = b;
-        b = temp;
+        }else {
+            while (a < limite) {
+                printf("%d ", a);
+                int temp = a + b;
+                a = b;
+                b = temp;
+            }
+        }
+    }else {
+        printf("Nombre invalide");
     }
 
     return 0;

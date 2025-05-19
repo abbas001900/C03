@@ -2,28 +2,21 @@
 
 int main(void) {
     int limit;
-    if (scanf("%d", &limit) == 1) {
-        printf("\n");
 
-        int nb1 = 0, nb2 = 1;
+    if (scanf("%d", &limit) == 1 && limit > 0) {
+        int nb1 = 0, nb2 = 1, suite;
 
-        int suite = nb1 + nb2;
-        while (suite < limit) {
-            if (limit > 0 && limit > 1) {
-                printf("%d ", nb1);
-                printf("%d ", suite);
-                nb1 = nb2;
-                nb2 = suite;
-                suite = nb1 + nb2;
-                
-            }
+        while (nb1 < limit) {
+            printf("%d", nb1);
+            suite = nb1 + nb2;
+            nb1 = nb2;
+            nb2 = suite;
         }
-        printf("\n");
-    }
-    else {
-        printf("Entrez un nombre valide");
-    }
 
+        printf("\n");
+    } else {
+        printf("Entrez une valeur entière positive valide.\n");
+    }
 
     return 0;
 }

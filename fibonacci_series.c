@@ -6,7 +6,7 @@ int main() {
 
     int a = 0, b = 1;
 
-    while (a <= limite) {
+    while (a < limite) {
         printf("%d ", a);
         int temp = a + b;
         a = b;

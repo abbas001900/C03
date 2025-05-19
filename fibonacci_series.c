@@ -9,8 +9,8 @@ int main(void) {
     int suite = nb1 + nb2;
     while (suite < limit) {
         if (limit > 0 && limit > 1) {
-            printf("%d", nb1);
-            printf("%d ", suite);
+            printf("%d ", nb1);
+            printf("%d", suite);
             nb1 = nb2;
             nb2 = suite;
             suite = nb1 + nb2;

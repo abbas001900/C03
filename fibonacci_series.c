@@ -3,6 +3,7 @@
 int main(void) {
     int limit;
     if (scanf("%d", &limit) == 1) {
+        printf("\n");
 
         int nb1 = 0, nb2 = 1;
 

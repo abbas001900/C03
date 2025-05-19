@@ -3,7 +3,6 @@
 int main(void) {
     int limit;
 
-    printf("Entrez une limite : ");
     if (scanf("%d", &limit) == 1 && limit >= 0) {
         int nb1 = 0, nb2 = 1;
 

@@ -9,7 +9,7 @@ int main() {
             printf("%d", a);
 
         }else {
-            while (a < limite) {
+            while (a <= limite) {
                 printf("%d ", a);
                 int temp = a + b;
                 a = b;

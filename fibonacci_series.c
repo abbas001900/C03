@@ -1,20 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int n, i;
-    int a = 0, b = 1, suivant;
+int main(void) {
+    int limit;
+    scanf("%d", &limit);
 
-    // Lire le nombre de termes à afficher
-    scanf("%d", &n);
+    int nb1 = 0, nb2 = 1;
 
-    for (i = 0; i < n; i++) {
-        printf("%d ", a);
-        suivant = a + b;
-        a = b;
-        b = suivant;
+    int suite = nb1 + nb2;
+    while (suite < limit) {
+        if (limit > 0 && limit > 1) {
+            printf("%d", nb1);
+            printf("%d ", suite);
+            nb1 = nb2;
+            nb2 = suite;
+            suite = nb1 + nb2;
+        }
     }
 
-    printf("\n");
+
     return 0;
 }
-

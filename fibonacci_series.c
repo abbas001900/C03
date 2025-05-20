@@ -16,7 +16,6 @@ void afficherFibonacci(int limite) {
         b = temp;
     }
 
-    printf("\n"); // Fin de ligne après la série
 }
 
 int main() {

@@ -8,7 +8,6 @@ int main() {
     long long limite;
     char *endptr;
 
-    printf("Entrez la limite : ");
     if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
         printf("Erreur de lecture\n");
         return 1;
@@ -42,6 +41,5 @@ int main() {
         b = f;
     }
 
-    printf("\n");
     return 0;
 }

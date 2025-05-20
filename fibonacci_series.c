@@ -6,16 +6,15 @@ int main() {
         unsigned long long a = 0, b = 1, f = 0;
 
         if (limite == 0) {
-            printf("0\n");
+            printf("0");
         } else {
             printf("0 ");
-            while (b < limite) {
+            while (b <= limite) {
                 printf("%llu ", b);
                 f = a + b;
                 a = b;
                 b = f;
             }
-            printf("\n");
         }
     } else {
         printf("Nombre invalide\n");

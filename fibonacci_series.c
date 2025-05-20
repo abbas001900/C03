@@ -15,10 +15,10 @@ int main() {
         int f;
         do {
             if (limite == 0) {
-                printf("0");
+                printf("0 ");
                 break;
             } else if (limite == 1) {
-                printf("0 1 1");
+                printf("0 1 1 ");
                 break;
             } else {
                 f = fibonacci(n);

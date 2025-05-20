@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int fibonacci(int n) {
+long fibonacci(int n) {
     double ti = (1 - sqrt(5)) / 2;
     double phi = (1 + sqrt(5)) / 2;
     double fn = (1 / sqrt(5)) * (pow(phi, n) - pow(ti, n));
@@ -14,10 +14,18 @@ int main() {
         int n = 0;
         int f;
         do {
-            f = fibonacci(n);
-            if (f <= limite)
-                printf("%d ", f);
-            n++;
+            if (limite == 0) {
+                printf("0");
+                break;
+            } else if (limite == 1) {
+                printf("0 1 1");
+                break;
+            } else {
+                f = fibonacci(n);
+                if (f <= limite)
+                    printf("%d ", f);
+                n++;
+            }
         } while (f < limite);
     } else {
         printf("Nombre invalide\n");

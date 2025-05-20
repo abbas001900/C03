@@ -34,7 +34,7 @@ int main() {
 
     printf("0 ");
 
-    while (b <= (unsigned long long)limite) {
+    while (b < (unsigned long long)limite) {
         printf("%llu ", b);
         f = a + b;
         a = b;

@@ -9,7 +9,7 @@ int main() {
             printf("0\n");
         } else {
             printf("0 ");
-            while (b <= limite) {
+            while (b < limite) {
                 printf("%llu ", b);
                 f = a + b;
                 a = b;

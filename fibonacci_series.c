@@ -1,32 +1,22 @@
 #include <stdio.h>
-#include <math.h>
-
-long fibonacci(int n) {
-    double ti = (1 - sqrt(5)) / 2;
-    double phi = (1 + sqrt(5)) / 2;
-    double fn = (1 / sqrt(5)) * (pow(phi, n) - pow(ti, n));
-    return (int)floor(fn + 0.5);  // +0.5 pour arrondir correctement
-}
 
 int main() {
-    int limite;
-    if (scanf("%d", &limite) == 1) {
-        int n = 0;
-        int f;
-        do {
-            if (limite == 0) {
-                printf("0 ");
-                break;
-            } else if (limite == 1) {
-                printf("0 1 1 ");
-                break;
-            } else {
-                f = fibonacci(n);
-                if (f <= limite)
-                    printf("%d ", f);
-                n++;
+    unsigned long long limite;
+    if (scanf("%llu", &limite) == 1) {
+        unsigned long long a = 0, b = 1, f = 0;
+
+        if (limite == 0) {
+            printf("0\n");
+        } else {
+            printf("0 ");
+            while (b <= limite) {
+                printf("%llu ", b);
+                f = a + b;
+                a = b;
+                b = f;
             }
-        } while (f < limite);
+            printf("\n");
+        }
     } else {
         printf("Nombre invalide\n");
     }

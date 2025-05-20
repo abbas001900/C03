@@ -25,7 +25,7 @@ int main() {
     int limite = atoi(input);
 
     int a = 0, b = 1;
-    printf("%d ", a);
+    printf("%d, ", a);
     while (b <= limite) {
         printf("%d ", b);
         int temp = a + b;

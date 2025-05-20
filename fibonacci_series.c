@@ -19,7 +19,6 @@ void afficherFibonacci(unsigned long long limite) {
 int main() {
     unsigned long long limite;
 
-    printf("Entrez la limite : ");
     scanf("%llu", &limite);
 
     afficherFibonacci(limite);

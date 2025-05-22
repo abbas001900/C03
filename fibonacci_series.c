@@ -1,19 +1,24 @@
 #include <stdio.h>
 
-int main() {
-    int n; // nombre de termes à afficher
+int main(void) {
+    int limit;
+    scanf("%d", &limit);
 
-    scanf("%d", &n);
+    int nb1 = 0, nb2 = 1;
 
-    int a = 0, b = 1;
+    if (limit >= 0) {
+        printf("%d ", nb1);
+    }
+    if (limit >= 1) {
+        printf("%d ", nb2);
+    }
 
-    printf("Suite de Fibonacci :\n");
-
-    for (int i = 0; i <= n; i++) {
-        printf("%d ", a);
-        int temp = a + b;
-        a = b;
-        b = temp;
+    int suite = nb1 + nb2;
+    while (suite <= limit) {
+        printf("%d ", suite);
+        nb1 = nb2;
+        nb2 = suite;
+        suite = nb1 + nb2;
     }
 
     printf("\n");

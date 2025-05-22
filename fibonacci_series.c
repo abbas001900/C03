@@ -21,6 +21,5 @@ int main(void) {
         suite = nb1 + nb2;
     }
 
-    printf("\n");
     return 0;
 }

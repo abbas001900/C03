@@ -1,6 +1,8 @@
 #include <stdio.h>  // Inclusion de la bibliothèque standard pour les fonctions d'entrée/sortie
 
 int main() {
+    char buffer[100];
+    char extra;
     int nombre, original;  // Déclaration des variables : 'nombre' pour la saisie, 'original' pour garder la valeur d'origine
     int count = 0;         // Variable pour compter le nombre de chiffres
 

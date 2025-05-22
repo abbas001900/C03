@@ -9,7 +9,7 @@ int main() {
 
     printf("Suite de Fibonacci :\n");
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <= n; i++) {
         printf("%d ", a);
         int temp = a + b;
         a = b;

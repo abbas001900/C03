@@ -1,25 +1,27 @@
 #include <stdio.h>
 
-int main(void) {
-    int limit;
-    scanf("%d", &limit);
+void afficherFibonacci(unsigned long long limite) {
+    unsigned long long a = 0;
+    unsigned long long b = 1;
 
-    int nb1 = 0, nb2 = 1;
+    printf("Fibonacci : %llu ", a);  // affiche le premier terme
 
-    if (limit >= 0) {
-        printf("%d ", nb1);
-    }
-    if (limit >= 1) {
-        printf("%d ", nb2);
+    while (b <= limite) {
+        printf("%llu ", b);
+        unsigned long long suivant = a + b;
+        a = b;
+        b = suivant;
     }
 
-    int suite = nb1 + nb2;
-    while (suite <= limit) {
-        printf("%d ", suite);
-        nb1 = nb2;
-        nb2 = suite;
-        suite = nb1 + nb2;
-    }
+    printf("\n");
+}
+
+int main() {
+    unsigned long long limite;
+
+    scanf("%llu", &limite);
+
+    afficherFibonacci(limite);
 
     return 0;
 }

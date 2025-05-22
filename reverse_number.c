@@ -2,9 +2,19 @@
 
 int main() {
     int nombre, reversed = 0, reste;
+    char buffer[100];
+    char extra;
 
-    // Lire l'entier
-    if (scanf("%d", &nombre) == 1) {
+    // Recuperation de la Valeur entree par l'utilisateur
+    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+
+        // Vérifie qu'il n'y a qu'un entier dans l'entrée (et rien d'autre)
+        // Si sscanf lit plus qu'un entier (par ex : "123abc"), la condition échoue
+        if (sscanf(buffer, "%d %c", &nombre, &extra) != 1) {
+            printf("Erreur : entrée invalide. Veuillez entrer un entier uniquement.\n");
+
+            return 1;  // Fin du programme avec une erreur
+        }
 
         int original = nombre; // Sauvegarder le nombre d'origine
 
@@ -27,8 +37,6 @@ int main() {
         // Afficher le résultat
         printf("Nombre inversé : %d\n", reversed);
     }
-    else {
-        printf("Entrez un nomre valide");
-    }
+    
     return 0;
 }

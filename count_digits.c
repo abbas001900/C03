@@ -5,7 +5,16 @@ int main() {
     int count = 0;         // Variable pour compter le nombre de chiffres
 
     // Lire l'entier
-    if (scanf("%d", &nombre) == 1) {  // Vérifie que l'utilisateur a bien saisi un entier
+    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+
+
+        // Vérifie qu'il n'y a qu'un entier dans l'entrée (et rien d'autre)
+        // Si sscanf lit plus qu'un entier (par ex : "123abc"), la condition échoue
+        if (sscanf(buffer, "%d %c", &nombre, &extra) != 1) {
+            printf("Erreur : entrée invalide. Veuillez entrer un entier uniquement.\n");
+
+            return 1;  // Fin du programme avec une erreur
+        }
 
         original = nombre;  // Sauvegarder la valeur d'origine pour l'affichage final
 
@@ -27,9 +36,6 @@ int main() {
 
         // Afficher le résultat
         printf("%d contient %d chiffre(s).\n", original, count);  // Affiche le nombre initial et son nombre de chiffres
-    }
-    else {
-        printf("Entrez un nombre valide");  // Message d'erreur si la saisie échoue
     }
 
     return 0;  // Fin normale du programme
